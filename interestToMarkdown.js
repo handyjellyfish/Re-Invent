@@ -43,21 +43,22 @@ function processSessions() {
       session.querySelector(".actionColumn .sessionRoom").textContent &&
       session.querySelector(".actionColumn .sessionRoom").textContent.substring(3);
       
-
-    sessions.push({
-      id,
-      link,
-      abbreviation,
-      title,
-      description,
-      type,
-      status,
-      speakers,
-      datetext,
-      start,
-      end,
-      location
-    });
+    if (status != "") {
+      sessions.push({
+        id,
+        link,
+        abbreviation,
+        title,
+        description,
+        type,
+        status,
+        speakers,
+        datetext,
+        start,
+        end,
+        location
+      });
+    }
   });
 
   console.log("Processing sessions: SUCCESS");
